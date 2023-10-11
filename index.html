@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="pg">
+      <h1>Password Generator</h1>
+
+      <div class="password">
+        <h2 id="psw">P4$5W0rD!</h2>
+        <div class="icon">
+          <span id="msg"></span>
+          <img src="./images/icon-copy.svg" alt="icon-copy" onclick="copy()" />
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="length">
+          <h3>Character Length</h3>
+          <span id="val"></span>
+        </div>
+        <!-- <div class="sl"> -->
+        <input type="range" min="0" max="20" value="0" id="myRange" />
+        <!-- </div>class="slider"
+          id="myRange" -->
+
+        <div class="box">
+          <label for="upper" class="container"
+            >Include Uppercase Letters
+            <input type="checkbox" id="upper" name="uppercase" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label for="lowercase" class="container"
+            >Include Lowercase Letters
+            <input type="checkbox" id="lowercase" name="lowercase" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label for="numbers" class="container"
+            >Include Numbers
+            <input type="checkbox" id="numbers" name="numbers" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label for="symbols" class="container"
+            >Include Symbols
+            <input type="checkbox" id="symbols" name="symbols" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="strength">
+          <h4>STRENGTH</h4>
+          <div class="st">
+            <span id="txt"></span>
+            <div class="bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <button id="generateButton">
+          Generate
+          <span id="imgg">
+            <!-- <img src="./images/icon-arrow-right.svg" alt="arrow-right" /> -->
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

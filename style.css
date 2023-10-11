@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #08070B;
+  color: var(--Almost-White, #E6E5EA);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  /* background: linear-gradient(180deg, #14131B 0%, #08070B 100%); */
+}
+
+.pg {
+  display: flex;
+  width: 343px;
+  height: 540px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: #08070B;
+  margin: 64px 16px;
+}
+
+h1 {
+  color: #817D92;
+  text-align: center;
+  font-size: 16px;
+  width: 173px;
+  height: 21px;
+}
+
+.password {
+  width: 343px;
+  height: 64px;
+  background: var(--Dark-Grey, #24232C);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  opacity: 0.25;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+#msg {
+  color: #A4FFAF;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.icon img {
+  width: 17.5px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.main {
+  width: 343px;
+  height: 423px;
+  background: var(--Dark-Grey, #24232C);
+  padding: 16px;
+}
+
+.length {
+  display: flex;
+  width: 311px;
+  height: 31px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+#val {
+  font-size: 24px;
+  color: var(--Neon-Green, #A4FFAF);
+}
+
+/* slider */
+#myRange {
+  background: linear-gradient(to right, rgb(164, 255, 175) 0%, rgb(164, 255, 175) 0%, rgb(24, 23, 31) 0%, rgb(24, 23, 31));
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 18px 0 42px;
+  width: 311px;
+  height: 8px;
+  outline: none;
+}
+
+input#myRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--Almost-White, #E6E5EA);
+  cursor: pointer;
+}
+
+input#myRange::-webkit-slider-thumb:hover {
+  border: 2px solid #A4FFAF;
+  background: #18171F;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 280px;
+  height: 132px;
+}
+
+/* The container */
+.container {
+  display: block;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  width: 280px;
+  height: 21px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  /* background-color: rgba(164, 255, 175, 1); */
+}
+
+/*  add a grey background color */
+.container input~.checkmark {
+  background-color: rgba(24, 23, 31, 1);
+  border: 2px solid var(--Almost-White, #E6E5EA);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: rgba(164, 255, 175, 1);
+  border: none
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* ptichka */
+.container .checkmark:after {
+  left: 6.5px;
+  top: 2px;
+  width: 4px;
+  height: 11px;
+  border: solid #18171F;
+  border-width: 0 3.5px 3.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.strength {
+  margin: 32px 0 16px;
+  background: #18171F;
+  width: 311px;
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h4 {
+  color: var(--Grey, #817D92);
+  font-size: 16px;
+}
+
+.st {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#txt {
+  /* text-align: right; */
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.bars {
+  display: flex;
+  gap: 8px;
+}
+
+.bar {
+  width: 10px;
+  height: 28px;
+  border: 2px solid var(--Almost-White, #E6E5EA);
+}
+
+button {
+  width: 311px;
+  height: 56px;
+  background: var(--Neon-Green, #A4FFAF);
+  border: none;
+  color: var(--Dark-Grey, #24232C);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+#imgg {
+  width: 11.105px;
+  height: 12px;
+  background-image: url("./images/icon-arrow-right.svg");
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid var(--Neon-Green, #A4FFAF);
+  background-color: rgba(36, 35, 44, 1);
+  color: var(--Neon-Green, #A4FFAF);
+}
+
+button:hover #imgg {
+  background-image: url("./images/bx_arrow-to-left.svg");
+}
+
+
+@media screen and (min-width:1440px) {
+  .pg {
+    width: 540px;
+    height: 695px;
+    gap: 24px;
+    background-color: #08070B;
+    margin: 133px 450px 196px;
+  }
+
+  h1 {
+    font-size: 24px;
+    width: 260px;
+    height: 32px;
+    margin-bottom: 7px;
+  }
+
+  .password {
+    width: 540px;
+    height: 80px;
+    padding: 0 32px;
+  }
+
+  h2 {
+    font-size: 32px;
+    opacity: 0.25;
+  }
+
+  #msg {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .icon img {
+    width: 21px;
+    height: 24px;
+  }
+
+  .main {
+    width: 540px;
+    height: 528px;
+    padding: 24px 32px 32px;
+  }
+
+  .length {
+    width: 476px;
+    height: 43px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  #val {
+    font-size: 32px;
+  }
+
+  #myRange {
+    margin: 26px 0 42px;
+    appearance: none;
+    width: 476px;
+    height: 8px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 315px;
+    height: 152px;
+  }
+
+  /* The container */
+  .container {
+    display: block;
+    padding-left: 44px;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    width: 315px;
+    height: 23px;
+  }
+
+  .strength {
+    margin: 31px 0 32px;
+    width: 476px;
+    height: 72px;
+    padding: 0 32px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .st {
+    gap: 16px;
+  }
+
+  #txt {
+    font-size: 24px;
+  }
+
+  button {
+    width: 476px;
+    height: 65px;
+    font-size: 18px;
+    gap: 24px;
+  }
+}

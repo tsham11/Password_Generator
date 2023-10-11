@@ -16,19 +16,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     output.innerHTML = this.value; //for slider value
   };
 
-  //for copying the password
-  function copy() {
-    const copyText = document.getElementById("psw");
-    const copyMessage = document.getElementById("msg");
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.textContent);
-    copyMessage.textContent = "Copied";
-    // Clear the "copied" message after three seconds
-    setTimeout(function () {
-      copyMessage.textContent = "";
-    }, 2000);
-  }
-
   //to connect checkboxes to bar
   const upperCheckbox = document.getElementById("upper");
   const lowercaseCheckbox = document.getElementById("lowercase");
